@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import searchLocal from "@easyops-cn/docusaurus-search-local";
 
 const config: Config = {
-  title: "ARCAIRA Docs",
+  title: "ARCAIRA Wiki",
   tagline: "The official ARCAIRA wiki.",
   favicon: "img/favicon.ico",
 
