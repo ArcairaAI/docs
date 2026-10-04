@@ -67,7 +67,7 @@
 }
 
 .navbar__title::after {
-  content: 'DOCS';
+  content: 'WIKI';
   transform: translateY(-0.125rem);
   border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
   border-radius: 9999px;

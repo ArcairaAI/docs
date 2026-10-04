@@ -5,7 +5,7 @@ import searchLocal from "@easyops-cn/docusaurus-search-local";
 
 const config: Config = {
   title: "ARCAIRA Docs",
-  tagline: "Documentation for ARCAIRA",
+  tagline: "The official ARCAIRA wiki.",
   favicon: "img/favicon.ico",
 
   future: {
