@@ -1,30 +1,125 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+@font-face {
+  font-family: 'Groptika';
+  src: url('/fonts/Groptika.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+:root {
+  --ifm-color-primary: #c82215;
+  --ifm-color-primary-dark: #b41f13;
+  --ifm-color-primary-darker: #aa1d12;
+  --ifm-color-primary-darkest: #8c180f;
+  --ifm-color-primary-light: #dc2617;
+  --ifm-color-primary-lighter: #e42d1e;
+  --ifm-color-primary-lightest: #e9574d;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f7f7f5;
+
+  --ifm-font-color-base: #171714;
+  --ifm-heading-color: #171714;
+
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f7f7f5;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(200, 34, 21, 0.08);
+
+  --scrollbar-thumb: #8f8577;
+  --scrollbar-thumb-hover: #171714;
+}
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #c82215;
+  --ifm-color-primary-dark: #b41f13;
+  --ifm-color-primary-darker: #aa1d12;
+  --ifm-color-primary-darkest: #8c180f;
+  --ifm-color-primary-light: #dc2617;
+  --ifm-color-primary-lighter: #e42d1e;
+  --ifm-color-primary-lightest: #e9574d;
+
+  --ifm-background-color: #13130f;
+  --ifm-background-surface-color: #1c1c16;
+
+  --ifm-font-color-base: #e2dbc9;
+  --ifm-heading-color: #e2dbc9;
+
+  --ifm-navbar-background-color: #1c1c16;
+  --ifm-footer-background-color: #1c1c16;
+
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.12);
+  --ifm-color-emphasis-200: rgba(255, 255, 255, 0.12);
+  --ifm-color-emphasis-300: rgba(255, 255, 255, 0.15);
+
+  --docusaurus-highlighted-code-line-bg: rgba(200, 34, 21, 0.15);
+
+  --scrollbar-thumb: #bbae9e;
+  --scrollbar-thumb-hover: #e2dbc9;
+}
+
+.navbar__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Groptika', sans-serif;
+}
+
+.navbar__title::after {
+  content: 'DOCS';
+  transform: translateY(-0.125rem);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  padding: 0.125rem 0.375rem;
+  color: var(--ifm-color-primary);
+  font-family: var(--ifm-font-family-base);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.025em;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.sidebar-category-getting-started > .menu__list-item-collapsible > .menu__link::before,
+.sidebar-category-guides > .menu__list-item-collapsible > .menu__link::before,
+.sidebar-category-policies > .menu__list-item-collapsible > .menu__link::before {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.sidebar-category-getting-started > .menu__list-item-collapsible > .menu__link::before {
+  content: "🚀";
+}
+
+.sidebar-category-guides > .menu__list-item-collapsible > .menu__link::before {
+  content: "📖";
+}
+
+.sidebar-category-policies > .menu__list-item-collapsible > .menu__link::before {
+  content: "🛡️";
 }

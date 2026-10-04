@@ -1,0 +1,329 @@
+---
+title: Character Creation Guidelines
+slug: /character-creation-guidelines
+sidebar_position: 1
+sidebar_label: Character Creation Guidelines
+---
+
+# Character Creation Guidelines
+
+These guidelines explain how to create characters that are clear, consistent, and easy for the model to understand.
+
+## Use each field for the right purpose
+
+ARCAIRA gives you separate fields for Personality, Backstory, Scenario, and Starting Message. Use each field for its intended purpose instead of repeating the same information everywhere.
+
+### Personality
+
+Use Personality to explain how the character behaves and speaks.
+
+You can include things like:
+
+- Personality traits
+- Speaking style
+- Habits
+- Likes and dislikes
+- Motivations
+- Fears
+- Goals
+- How the character treats other people
+
+Example:
+
+```text
+Kate is warm, affectionate, playful, and slightly spoiled. She speaks casually and often teases people she is close to. She cares deeply about the people around her and becomes worried when someone she loves is upset.
+```
+
+Try to describe behavior clearly instead of only listing traits.
+
+Instead of:
+
+```text
+Kate is nice, caring, funny.
+```
+
+Prefer:
+
+```text
+Kate is caring and affectionate. She notices when people around her are upset and usually tries to comfort them. She often uses playful teasing when she feels comfortable with someone.
+```
+
+## Backstory
+
+Use Backstory for important information about the character's past.
+
+This can include:
+
+- Where they came from
+- Important life events
+- Past relationships
+- Family history
+- Major experiences
+- Events that shaped their personality
+- Important facts the character should already know
+
+Example:
+
+```text
+Kate grew up in a quiet town with her older brother. She moved away when she was eighteen and has lived on her own since then. She became close friends with the user several years ago and trusts them more than most people.
+```
+
+Do not fill the backstory with details that will never matter in conversation.
+
+## Scenario
+
+Use Scenario to explain the current situation.
+
+This can include:
+
+- Where the character and user are
+- What is happening
+- Their current relationship
+- Why they are together
+- Important details about the current scene
+
+Example:
+
+```text
+Kate and the user have been close friends for several years. They are currently sitting together in Kate's apartment after a difficult day. Kate can tell that something is bothering the user.
+```
+
+Keep the scenario focused on the current setup.
+
+Do not turn the Scenario field into another full backstory.
+
+## Starting Message
+
+The Starting Message is the first message the user sees.
+
+It should establish the scene and give the user something meaningful to respond to.
+
+Good starting messages usually include:
+
+- An action
+- Some dialogue
+- Enough context to understand what is happening
+- A natural opening for the user to respond
+
+Example:
+
+```text
+*Kate looks over from the other side of the couch, noticing how quiet they have been.*
+
+"You've barely said anything since you got here. What happened?"
+```
+
+Avoid starting messages that give the user nothing to work with.
+
+For example:
+
+```text
+Hi.
+```
+
+or:
+
+```text
+Hello, how are you?
+```
+
+These can work in some cases, but they usually create a weaker opening.
+
+## Use tags when you need dynamic information
+
+ARCAIRA supports special tags that can be used inside character fields.
+
+For example:
+
+```text
+{{user}}
+```
+
+When the character is used, `{{user}}` is replaced with the current user's display name.
+
+You can use it naturally inside Personality, Backstory, Scenario, or Starting Message.
+
+For example:
+
+```text
+Kate has known {{user}} for several years and trusts them deeply.
+```
+
+If the user's display name is `Ayaan`, ARCAIRA will treat it as:
+
+```text
+Kate has known Ayaan for several years and trusts them deeply.
+```
+
+You can also use it in the Starting Message:
+
+```text
+*Kate looks up as {{user}} enters the room.*
+
+"You're finally here."
+```
+
+Use tags only where they make sense. Do not repeat `{{user}}` constantly when normal wording such as "the user", "they", or "them" would read more naturally.
+
+## Use clear, natural language
+
+Write character information in normal sentences.
+
+Avoid unnecessary structures like:
+
+```text
+[Personality "kind", "friendly", "calm"]
+(Likes "music", "dogs")
+{Hates "arguments"}
+```
+
+There is no real benefit to writing character information like this.
+
+It is clearer to write:
+
+```text
+Kate is kind, friendly, and calm. She likes music and dogs and dislikes arguments.
+```
+
+Clear language is easier to read and easier for the model to understand correctly.
+
+## Do not repeat the same information everywhere
+
+You usually do not need to write the same fact in Personality, Backstory, Scenario, and Starting Message.
+
+For example, if this is already in Personality:
+
+```text
+Kate is shy around strangers but very talkative around people she trusts.
+```
+
+you usually do not need to repeat the same sentence in Backstory and Scenario.
+
+Only repeat information when it is genuinely important to the current scene.
+
+## Do not add instructions ARCAIRA already handles
+
+You do not need to add general roleplay instructions like:
+
+```text
+Always stay in character.
+Never speak for the user.
+Use quotes for dialogue.
+Use asterisks for actions.
+Never break character.
+Never control the user.
+```
+
+ARCAIRA already handles general roleplay behavior and formatting. Dialogue, narration, user agency, and staying in character are already part of the system behavior.
+
+Use the character fields to describe the character, not to repeat platform instructions.
+
+## Keep the character consistent
+
+The information you provide should not contradict itself.
+
+For example, avoid writing:
+
+```text
+Kate is very shy and avoids talking to people.
+```
+
+and later:
+
+```text
+Kate loves meeting strangers and immediately becomes the center of attention.
+```
+
+unless there is a clear reason for both to be true.
+
+A character can have complex traits, but they should make sense together.
+
+For example:
+
+```text
+Kate is shy around strangers but becomes very energetic and talkative around people she trusts.
+```
+
+## Focus on useful details
+
+More text does not automatically make a better character.
+
+Focus on details that can actually affect how the character behaves.
+
+Useful details include:
+
+- How the character speaks
+- How they react under stress
+- How they treat the user
+- Important relationships
+- Strong likes and dislikes
+- Goals and motivations
+- Important past events
+- Current circumstances
+
+Less useful details include random facts that are unlikely to ever affect the conversation.
+
+## Give relationships clear context
+
+If the character already knows the user, explain their relationship.
+
+For example:
+
+```text
+Kate and {{user}} have been close friends for three years. Kate trusts {{user}} and is comfortable being honest with them.
+```
+
+This is much clearer than:
+
+```text
+Kate knows the user.
+```
+
+If the character and user are strangers, say that clearly too.
+
+## Describe speaking style when it matters
+
+If you want the character to speak in a specific way, explain it in Personality.
+
+For example:
+
+```text
+Kate speaks casually and uses short, natural sentences. She often jokes when she feels comfortable and becomes more direct when she is upset.
+```
+
+You can also describe things like:
+
+- Formal or casual speech
+- Sarcasm
+- Shyness
+- Confidence
+- Slang
+- Hinglish
+- Short or detailed replies
+- Calm or energetic speech
+
+Do not overload the character with too many speech rules.
+
+## Avoid forcing every response
+
+Do not write instructions that make every response follow the exact same pattern.
+
+For example:
+
+```text
+Kate must always laugh before speaking.
+Kate must always ask a question.
+Kate must always mention {{user}} by name.
+```
+
+This can make the character feel repetitive and unnatural.
+
+Describe normal tendencies instead.
+
+For example:
+
+```text
+Kate often laughs when she is nervous and sometimes uses humor to avoid serious topics.
+```
+
+This gives the character room to react naturally.
