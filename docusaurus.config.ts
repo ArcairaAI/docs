@@ -12,7 +12,7 @@ const config: Config = {
 
   url: "https://docs.arcaira.com",
   baseUrl: "/",
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: "throw",
 
